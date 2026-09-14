@@ -1,7 +1,7 @@
 [
   {
     "id": "ciamik-nian",
-    "title": "Ciamik Nian",
+    "title": "Ciamik Nian (Video Youtube)",
     "type": "single",
     "releaseDate": "2026-03-01",
     "thumbnail": "https://i.pinimg.com/1200x/50/82/ff/5082ff755c29c08e9013e67cb96aacb2.jpg",
@@ -11,7 +11,7 @@
   },
   {
     "id": "tak-tersedia",
-    "title": "Tak Tersedia",
+    "title": "Tak Tersedia (Video Youtube)",
     "type": "single",
     "releaseDate": "2025-11-15",
     "thumbnail": "https://i.pinimg.com/1200x/cd/fd/1b/cdfd1b4108d68b31f2a8f1ac53393e92.jpg",
@@ -20,8 +20,8 @@
     "tiktokUrl": null
   },
   {
-    "id": "shadows-and-dust",
-    "title": "Shadows and Dust",
+    "id": "not-yet-available",
+    "title": "Not Yet Available",
     "type": "video",
     "releaseDate": "2025-08-20",
     "thumbnail": "https://i.pinimg.com/736x/f4/d4/7e/f4d47e2c58084ee14bc31716c97ef649.jpg",

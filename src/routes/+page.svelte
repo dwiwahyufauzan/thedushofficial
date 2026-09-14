@@ -42,19 +42,19 @@
 </script>
 
 <svelte:head>
-	<title>{bandData.officialName} | Modern Rock Band — Jakarta</title>
+	<title>{bandData.officialName} | INDIEPOPROCK PINGGIRAN SUBANG.</title>
 	<meta name="description" content={bandData.shortBio} />
 	<meta name="robots" content="index, follow" />
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="{bandData.officialName} | Modern Rock Band" />
+	<meta property="og:title" content="{bandData.officialName} | INDIEPOPROCK PINGGIRAN SUBANG." />
 	<meta property="og:description" content={bandData.shortBio} />
 	<meta property="og:image" content="/images/background.jpg" />
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={bandData.officialName} />
+	<meta name="twitter:title" content="{bandData.officialName} | INDIEPOPROCK PINGGIRAN SUBANG." />
 	<meta name="twitter:description" content={bandData.shortBio} />
 	<meta name="twitter:image" content="/images/background.jpg" />
 

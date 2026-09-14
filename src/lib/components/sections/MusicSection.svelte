@@ -84,15 +84,15 @@
 							</div>
 						</div>
 
-						<!-- Release Title Only (Navbar font & normal weight, not bold) -->
-						<div class="mt-4 flex items-center justify-between gap-4">
+						<!-- Release Title Only (Navbar font & normal weight, not bold, closer & smaller) -->
+						<div class="mt-2 flex items-center justify-between gap-3 sm:mt-2.5">
 							<h3
-								class="text-lg font-normal tracking-normal text-stone-900 transition-colors duration-200 group-hover:text-stone-600 sm:text-xl lg:text-2xl"
+								class="text-sm font-normal tracking-normal text-stone-900 transition-colors duration-200 group-hover:text-stone-600 sm:text-base"
 							>
 								{featured.title}
 							</h3>
 							<span
-								class="flex shrink-0 items-center gap-1 text-xs font-normal text-stone-400 transition-colors group-hover:text-stone-900 sm:text-sm"
+								class="flex shrink-0 items-center gap-1 text-xs font-normal text-stone-400 transition-colors group-hover:text-stone-900"
 							>
 								Listen
 								<span
@@ -148,15 +148,15 @@
 							</div>
 						</div>
 
-						<!-- Release Title Only (Navbar font & normal weight, not bold) -->
-						<div class="mt-3 flex items-center justify-between gap-4">
+						<!-- Release Title Only (Navbar font & normal weight, not bold, closer & smaller) -->
+						<div class="mt-1.5 flex items-center justify-between gap-3 sm:mt-2">
 							<h3
-								class="text-base font-normal tracking-normal text-stone-900 transition-colors duration-200 group-hover:text-stone-600 sm:text-lg"
+								class="text-xs font-normal tracking-normal text-stone-900 transition-colors duration-200 group-hover:text-stone-600 sm:text-sm"
 							>
 								{release.title}
 							</h3>
 							<span
-								class="flex shrink-0 items-center gap-1 text-xs font-normal text-stone-400 transition-colors group-hover:text-stone-900 sm:text-sm"
+								class="flex shrink-0 items-center gap-1 text-[11px] font-normal text-stone-400 transition-colors group-hover:text-stone-900 sm:text-xs"
 							>
 								Listen
 								<span
