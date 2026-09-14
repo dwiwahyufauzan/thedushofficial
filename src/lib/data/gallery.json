@@ -1,0 +1,20 @@
+[
+  {
+    "id": "gal-01",
+    "image": "/images/hero-thedush-main.jpg",
+    "caption": "Live at Soundrenaline Arena, Jakarta",
+    "year": 2025
+  },
+  {
+    "id": "gal-02",
+    "image": "/images/band-about.jpg",
+    "caption": "Studio Recording Session 'Revelation'",
+    "year": 2025
+  },
+  {
+    "id": "gal-03",
+    "image": "/images/album-single-01-cover.jpg",
+    "caption": "Backstage Documentary, Bandung Tour",
+    "year": 2025
+  }
+]

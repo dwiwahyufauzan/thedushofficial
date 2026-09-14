@@ -1,0 +1,42 @@
+[
+  {
+    "id": "tour-01",
+    "date": "2026-10-17",
+    "city": "Jakarta",
+    "venue": "Gelora Bung Karno Arena",
+    "ticketStatus": "almost-gone",
+    "ticketUrl": "https://tiket.com"
+  },
+  {
+    "id": "tour-02",
+    "date": "2026-10-24",
+    "city": "Bandung",
+    "venue": "Eldorado Concert Hall",
+    "ticketStatus": "tickets",
+    "ticketUrl": "https://tiket.com"
+  },
+  {
+    "id": "tour-03",
+    "date": "2026-11-07",
+    "city": "Yogyakarta",
+    "venue": "Jogja Expo Center",
+    "ticketStatus": "tickets",
+    "ticketUrl": "https://tiket.com"
+  },
+  {
+    "id": "tour-04",
+    "date": "2026-11-14",
+    "city": "Surabaya",
+    "venue": "Jatim Expo Hall",
+    "ticketStatus": "sold-out",
+    "ticketUrl": null
+  },
+  {
+    "id": "tour-05",
+    "date": "2026-12-05",
+    "city": "Bali",
+    "venue": "GWK Cultural Park",
+    "ticketStatus": "tba",
+    "ticketUrl": null
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "thedush-revelation-tee",
+    "name": "The Dush 'Revelation' Heavyweight T-Shirt",
+    "price": 225000,
+    "currency": "IDR",
+    "images": [
+      "/images/transparan2"
+    ],
+    "status": "new",
+    "shopUrl": "https://tokopedia.com"
+  },
+  {
+    "id": "thedush-monolith-hoodie",
+    "name": "The Dush 'Monolith' Boxy Oversized Hoodie",
+    "price": 450000,
+    "currency": "IDR",
+    "images": [
+      "/images/hero-thedush-main.jpg"
+    ],
+    "status": "available",
+    "shopUrl": "https://tokopedia.com"
+  },
+  {
+    "id": "thedush-tour-cap",
+    "name": "The Dush 2026 Official Tour Washed Cap",
+    "price": 175000,
+    "currency": "IDR",
+    "images": [
+      "/images/band-about.jpg"
+    ],
+    "status": "preorder",
+    "shopUrl": "https://tokopedia.com"
+  }
+]

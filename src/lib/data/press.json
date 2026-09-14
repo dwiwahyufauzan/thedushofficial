@@ -1,0 +1,23 @@
+[
+  {
+    "id": "press-01",
+    "date": "2026-03-05",
+    "headline": "The Dush Gebrak Musik Rock Alternatif Tanah Air Lewat Single 'Revelation'",
+    "source": "Rolling Stone Indonesia",
+    "url": "https://example.com/press/the-dush-revelation"
+  },
+  {
+    "id": "press-02",
+    "date": "2025-12-20",
+    "headline": "Eksplorasi Gelap & Energik: The Dush Menuju Tur Nasional 2026",
+    "source": "Pop Hari Ini",
+    "url": "https://example.com/press/the-dush-tour-2026"
+  },
+  {
+    "id": "press-03",
+    "date": "2025-09-10",
+    "headline": "Kekuatan Soundscape Baru dalam Kancah Rock Modern Indonesia",
+    "source": "Hai Online",
+    "url": "https://example.com/press/soundscape-baru-the-dush"
+  }
+]

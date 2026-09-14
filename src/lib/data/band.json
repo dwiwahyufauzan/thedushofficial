@@ -1,0 +1,29 @@
+{
+  "name": "The Dush",
+  "officialName": "The Dush Official",
+  "tagline": "Modern Rock / Alternative Band",
+  "genre": "Modern Rock / Alternative",
+  "formedYear": 2023,
+  "originCity": "Jakarta, Indonesia",
+  "coordinates": "6°12'18.8\"S 106°49'49.4\"E",
+  "shortBio": "Unit rock modern asal Jakarta yang memadukan distorsi tebal, riff atmosferik, dan melodi vokal emosional dengan lanskap visual sinematik.",
+  "fullBio": "Terbentuk di Jakarta pada tahun 2023, The Dush hadir mendefinisikan kembali lanskap musik rock alternatif tanah air. Menggabungkan aransemen yang dinamis, ketukan perkusi bertenaga, dan atmosfer gelap yang sinematik, The Dush menyajikan karya yang otentik dan menggugah baik di atas panggung maupun di dalam rekaman studio.",
+  "members": [
+    { "name": "Vocalist", "role": "Lead Vocals" },
+    { "name": "Guitarist 1", "role": "Lead Guitar & Synthesizer" },
+    { "name": "Guitarist 2", "role": "Rhythm Guitar" },
+    { "name": "Bassist", "role": "Bass Guitar" },
+    { "name": "Drummer", "role": "Drums & Percussion" }
+  ],
+  "contact": {
+    "booking": "booking@thedushofficial.com",
+    "press": "press@thedushofficial.com",
+    "management": "management@thedushofficial.com"
+  },
+  "socials": {
+    "instagram": "https://instagram.com/thedushofficial",
+    "spotify": "https://open.spotify.com/artist/thedushofficial",
+    "youtube": "https://youtube.com/@thedushofficial",
+    "tiktok": "https://tiktok.com/@thedushofficial"
+  }
+}
