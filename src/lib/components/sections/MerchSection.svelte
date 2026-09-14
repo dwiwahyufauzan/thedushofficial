@@ -63,9 +63,9 @@
 <!-- MERCH SECTION — Dark Background Aesthetic with Right-Side BG    -->
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <section id="merch" data-theme="dark" class="relative overflow-hidden bg-stone-950 pt-20 pb-12 text-white sm:pt-28 sm:pb-16">
-	<!-- Right-side Background Atmosphere -->
+	<!-- Right-side Background Atmosphere (Desktop only, hidden on mobile) -->
 	<div
-		class="pointer-events-none absolute top-0 right-0 bottom-0 z-0 w-full overflow-hidden select-none md:w-1/2 lg:w-5/12"
+		class="pointer-events-none absolute top-0 right-0 bottom-0 z-0 hidden overflow-hidden select-none md:block md:w-1/2 lg:w-5/12"
 	>
 		<img
 			src={resolvedBgImage}
