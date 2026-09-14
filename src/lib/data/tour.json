@@ -5,7 +5,8 @@
     "city": "Jakarta",
     "venue": "Gelora Bung Karno Arena",
     "ticketStatus": "almost-gone",
-    "ticketUrl": "https://tiket.com"
+    "ticketUrl": "https://tiket.com",
+    "image": "https://i.pinimg.com/736x/e2/33/df/e233df3e3d1eb7e6212dfa98e5b5aacf.jpg"
   },
   {
     "id": "tour-02",
@@ -13,7 +14,8 @@
     "city": "Bandung",
     "venue": "Eldorado Concert Hall",
     "ticketStatus": "tickets",
-    "ticketUrl": "https://tiket.com"
+    "ticketUrl": "https://tiket.com",
+    "image": "https://i.pinimg.com/1200x/42/af/53/42af532c245a48019ef07da43f355a0b.jpg"
   },
   {
     "id": "tour-03",
@@ -21,7 +23,8 @@
     "city": "Yogyakarta",
     "venue": "Jogja Expo Center",
     "ticketStatus": "tickets",
-    "ticketUrl": "https://tiket.com"
+    "ticketUrl": "https://tiket.com",
+    "image": "https://i.pinimg.com/736x/ad/a8/b9/ada8b9e3b07f99e7547ef89ca43b88f0.jpg"
   },
   {
     "id": "tour-04",
@@ -29,7 +32,8 @@
     "city": "Surabaya",
     "venue": "Jatim Expo Hall",
     "ticketStatus": "sold-out",
-    "ticketUrl": null
+    "ticketUrl": null,
+    "image": "https://i.pinimg.com/736x/7f/cc/5a/7fcc5ac62db07418ecdef9495c25afc6.jpg"
   },
   {
     "id": "tour-05",
@@ -37,6 +41,7 @@
     "city": "Bali",
     "venue": "GWK Cultural Park",
     "ticketStatus": "tba",
-    "ticketUrl": null
+    "ticketUrl": null,
+    "image": "https://i.pinimg.com/736x/12/e1/f5/12e1f5ff6e9ea8f010b7a1d4ff3f757d.jpg"
   }
 ]

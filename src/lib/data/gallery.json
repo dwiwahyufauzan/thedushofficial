@@ -1,20 +1,44 @@
 [
   {
     "id": "gal-01",
-    "image": "/images/hero-thedush-main.jpg",
-    "caption": "Live at Soundrenaline Arena, Jakarta",
-    "year": 2025
+    "image": "https://i.pinimg.com/1200x/56/01/d2/5601d2729e92fa497ecd8936726de705.jpg",
+    "caption": "Live Performance",
+    "year": 2026
   },
   {
     "id": "gal-02",
-    "image": "/images/band-about.jpg",
-    "caption": "Studio Recording Session 'Revelation'",
-    "year": 2025
+    "image": "https://i.pinimg.com/736x/ea/8c/42/ea8c4236fdb219bb06c84c8b434eaec6.jpg",
+    "caption": "Concert Crowd",
+    "year": 2026
   },
   {
     "id": "gal-03",
-    "image": "/images/album-single-01-cover.jpg",
-    "caption": "Backstage Documentary, Bandung Tour",
-    "year": 2025
+    "image": "https://i.pinimg.com/736x/3d/82/41/3d8241dca9d1164de1bc6de7d286576d.jpg",
+    "caption": "Guitar Solo",
+    "year": 2026
+  },
+  {
+    "id": "gal-04",
+    "image": "https://wallpapercave.com/wp/wp10259570.jpg",
+    "caption": "Festival Lights",
+    "year": 2026
+  },
+  {
+    "id": "gal-05",
+    "image": "https://i.pinimg.com/1200x/c0/f3/b6/c0f3b60780c4453ba2a2986bb62956ab.jpg",
+    "caption": "Stage Energy",
+    "year": 2026
+  },
+  {
+    "id": "gal-06",
+    "image": "https://mcdn.wallpapersafari.com/medium/40/66/TvyM4S.jpg",
+    "caption": "Tour Night",
+    "year": 2026
+  },
+  {
+    "id": "gal-07",
+    "image": "https://wallpapercave.com/wp/wp10259503.jpg",
+    "caption": "Live Finale",
+    "year": 2026
   }
 ]

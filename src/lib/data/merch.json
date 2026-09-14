@@ -5,7 +5,9 @@
     "price": 225000,
     "currency": "IDR",
     "images": [
-      "/images/transparan2"
+      "/images/transparan2.png",
+      "/images/merch1.png",
+      "/images/merch2.png"
     ],
     "status": "new",
     "shopUrl": "https://tokopedia.com"
@@ -16,7 +18,9 @@
     "price": 450000,
     "currency": "IDR",
     "images": [
-      "/images/hero-thedush-main.jpg"
+      "/images/transparan2.png",
+      "/images/merch1.png",
+      "/images/merch2.png"
     ],
     "status": "available",
     "shopUrl": "https://tokopedia.com"
@@ -27,7 +31,9 @@
     "price": 175000,
     "currency": "IDR",
     "images": [
-      "/images/band-about.jpg"
+      "/images/transparan2.png",
+      "/images/merch1.png",
+      "/images/merch2.png"
     ],
     "status": "preorder",
     "shopUrl": "https://tokopedia.com"

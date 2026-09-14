@@ -1,13 +1,16 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import bandData from '$lib/data/band.json';
 
 	interface Props {
 		heroImage?: string;
 		logoIcon?: string;
+		description?: string;
 	}
 	let {
 		heroImage = '/images/background.jpg',
-		logoIcon = '/images/thedushhero.png'
+		logoIcon = '/images/thedushhero.png',
+		description = bandData.fullBio
 	}: Props = $props();
 
 	const resolvedHeroImage = $derived(
@@ -70,8 +73,6 @@
 	}
 
 	.emblem-3d {
-		filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.35))
-			drop-shadow(0 20px 35px rgba(0, 0, 0, 0.85));
 		backface-visibility: visible;
 	}
 

@@ -86,9 +86,9 @@
 
 <svelte:window onkeydown={(e) => e.key === 'Escape' && close()} />
 
-<!-- ─── Transparent Navbar with Minimal Monochrome Typography ────── -->
+<!-- ─── Transparent Navbar with Dynamic Blend Mode (Hue & Inversion) ────── -->
 <header
-	class="pointer-events-auto fixed inset-x-0 top-0 z-50 bg-transparent py-4 transition-colors duration-300 sm:py-5"
+	class="pointer-events-auto fixed inset-x-0 top-0 z-50 bg-transparent py-4 transition-colors duration-300 sm:py-5 {menuOpen ? '' : 'nav-blend-mode'}"
 >
 	<div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
 		<!-- Brand: Thedush Logo Image -->
@@ -98,10 +98,9 @@
 			aria-label="The Dush Home"
 		>
 			<img
-				src="{base}/images/Thedush.png"
+				src="{base}/images/Thedush-white.png"
 				alt="The Dush"
-				class="h-6 sm:h-7 md:h-8 w-auto object-contain transition-all duration-300
-				{isDark || menuOpen ? 'brightness-0 invert' : ''}"
+				class="h-6 sm:h-7 md:h-8 w-auto object-contain"
 			/>
 		</a>
 
@@ -110,14 +109,8 @@
 			{#each desktopLinks as { label, href }}
 				<a
 					{href}
-					class="px-3 py-1.5 text-sm tracking-normal transition-opacity duration-150
-						{isDark
-						? activeHash === href
-							? 'font-medium text-white opacity-100'
-							: 'font-normal text-white opacity-70 hover:opacity-100'
-						: activeHash === href
-							? 'font-medium text-stone-950 opacity-100'
-							: 'font-normal text-stone-900 opacity-70 hover:opacity-100'}"
+					class="px-3 py-1.5 text-sm tracking-normal text-white transition-opacity duration-150
+					{activeHash === href ? 'font-semibold opacity-100' : 'font-normal opacity-85 hover:opacity-100'}"
 				>
 					{label}
 				</a>
@@ -128,19 +121,13 @@
 		<div class="hidden items-center gap-3 md:flex">
 			<a
 				href="#contact"
-				class="px-3 py-1.5 text-sm font-normal transition-opacity duration-150
-				{isDark
-					? 'text-white opacity-70 hover:opacity-100'
-					: 'text-stone-900 opacity-70 hover:opacity-100'}"
+				class="px-3 py-1.5 text-sm font-normal text-white opacity-85 transition-opacity duration-150 hover:opacity-100"
 			>
 				Contact
 			</a>
 			<a
 				href="#tour"
-				class="rounded-full border px-3.5 py-1 text-xs font-normal transition-opacity duration-150 sm:text-sm
-				{isDark
-					? 'border-white/60 text-white hover:opacity-80'
-					: 'border-stone-800/60 text-stone-900 hover:opacity-80'}"
+				class="rounded-full border border-white/80 px-3.5 py-1 text-xs font-normal text-white transition-opacity duration-150 hover:opacity-80 sm:text-sm"
 			>
 				Get Tickets
 			</a>
@@ -152,8 +139,7 @@
 			onclick={() => (menuOpen = !menuOpen)}
 			aria-label={menuOpen ? 'Close menu' : 'Open menu'}
 			aria-expanded={menuOpen}
-			class="relative z-50 rounded-full p-2 transition-all duration-200 md:hidden
-			{isDark || menuOpen ? 'text-white hover:bg-white/10' : 'text-stone-900 hover:bg-black/5'}"
+			class="relative z-50 rounded-full p-2 text-white transition-all duration-200 md:hidden"
 		>
 			{#if menuOpen}
 				<svg
@@ -242,3 +228,10 @@
 		</div>
 	</div>
 {/if}
+
+<style>
+	:global(.nav-blend-mode),
+	.nav-blend-mode {
+		mix-blend-mode: difference;
+	}
+</style>

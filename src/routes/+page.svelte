@@ -66,4 +66,7 @@
 <!-- One-Pager 8 Sections Flow -->
 <HeroSection heroImage="{base}/images/background.jpg" logoIcon="{base}/images/thedushhero.png" />
 <MusicSection {releases} />
+<TourSection {tourDates} />
+<MerchSection {merchItems} />
+<GallerySection {galleryItems} />
 <ContactSection />

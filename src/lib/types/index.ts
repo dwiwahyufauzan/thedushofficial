@@ -25,6 +25,7 @@ export interface TourDate {
 	venue: string;
 	ticketStatus: TicketStatus;
 	ticketUrl: string | null;
+	image?: string;
 }
 
 export type MerchStatus = 'new' | 'preorder' | 'out-of-stock' | 'available';
