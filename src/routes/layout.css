@@ -1,0 +1,144 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+/* ============================================================
+   @theme — The Dush Official Design Tokens
+   TailwindCSS v4 — NO tailwind.config.js, semua token di sini
+   ============================================================ */
+@theme {
+  /* === BACKGROUND COLORS === */
+  --color-bg-primary: #0a0a0a;
+  --color-bg-secondary: #111111;
+  --color-bg-surface: #1a1a1a;
+  --color-bg-elevated: #222222;
+  --color-bg-overlay: rgba(10, 10, 10, 0.9);
+
+  /* === TEXT COLORS === */
+  --color-text-primary: #f5f5f5;
+  --color-text-secondary: #a0a0a0;
+  --color-text-muted: #606060;
+  --color-text-inverse: #0a0a0a;
+
+  /* === ACCENT COLORS (HANYA MERAH) === */
+  --color-accent-primary: #c3423c;
+  --color-accent-hover: #e04c46;
+  --color-accent-dark: #8b2e2a;
+  --color-accent-light: rgba(195, 66, 60, 0.15);
+
+  /* === BORDER COLORS === */
+  --color-border-primary: #2a2a2a;
+  --color-border-accent: #c3423c;
+  --color-border-muted: #1a1a1a;
+
+  /* === SPECIAL COLORS === */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* === FONT FAMILIES === */
+  --font-display: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-heading: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* === SHADOWS === */
+  --shadow-glow-red: 0 0 20px rgba(195, 66, 60, 0.3);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.5);
+  --shadow-overlay: 0 8px 48px rgba(0, 0, 0, 0.8);
+
+  /* === BORDER RADIUS (angular — rock aesthetic) === */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+}
+
+/* ============================================================
+   @layer utilities — Custom Utility Classes
+   ============================================================ */
+@layer utilities {
+  /* Heading compressed — signature BMTH style */
+  .heading-compressed {
+    font-family: var(--font-display);
+    font-weight: 900;
+    letter-spacing: -0.25rem;
+    transform: scaleY(1.7);
+    transform-origin: bottom center;
+    text-transform: uppercase;
+    line-height: 0.85;
+    display: inline-block;
+  }
+
+  /* Heading compressed medium */
+  .heading-compressed-md {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.15rem;
+    transform: scaleY(1.5);
+    transform-origin: bottom center;
+    text-transform: uppercase;
+    line-height: 0.9;
+    display: inline-block;
+  }
+
+  /* Label kecil uppercase */
+  .label-sm {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+}
+
+/* ============================================================
+   @layer base — Global Base Styles
+   ============================================================ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: #0a0a0a;
+    color: #f5f5f5;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #c3423c;
+    color: #ffffff;
+  }
+
+  img,
+  video {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* Focus visible styles untuk accessibility */
+  :focus-visible {
+    outline: 2px solid #c3423c;
+    outline-offset: 2px;
+  }
+
+  /* Remove outline saat mouse click, tapi tetap ada saat keyboard */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Pastikan semua heading menggunakan font display secara default */
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
+}
