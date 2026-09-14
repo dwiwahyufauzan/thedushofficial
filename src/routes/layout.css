@@ -25,7 +25,7 @@
   --color-amber-bg:    #fffbeb;
 
   /* ─── Typography ──────────────────────────────────────────── */
-  --font-display: 'Clash Display', 'Space Grotesk', system-ui, sans-serif;
+  --font-display: 'Syne', 'Clash Display', 'Space Grotesk', system-ui, sans-serif;
   --font-body:    'DM Sans', system-ui, sans-serif;
   --font-mono:    'DM Mono', 'Fira Mono', monospace;
 }

@@ -2,6 +2,7 @@
 	import { base } from '$app/paths';
 	import type { MerchItem } from '$lib/types';
 	import SectionLabel from '../ui/SectionLabel.svelte';
+	import { t } from '$lib/i18n';
 
 	interface Props {
 		merchItems: MerchItem[];
@@ -9,7 +10,7 @@
 	}
 	let {
 		merchItems,
-		bgImage = 'https://media.gettyimages.com/id/2241972581/photo/2025-when-we-were-young-music-festival.jpg?s=2048x2048&w=gi&k=20&c=jXNIf3nzNxmSOmp8_b1ZJX_O2pkfR13Y1zJSyT_LePs='
+		bgImage = 'https://t2.genius.com/unsafe/2096x0/https%3A%2F%2Fimages.genius.com%2Fd4efcceb45b037f93e3aa9e84823675d.1000x1000x1.png'
 	}: Props = $props();
 
 	// State for active image index on each product card
@@ -76,28 +77,32 @@
 	</div>
 
 	<div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-		<!-- Header (Left-aligned, consistent with Music & Tour) -->
-		<div class="mb-16 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-			<div>
-				<SectionLabel number="03" title="Merchandise" numberColor="text-white" class="mb-4" />
-				<h2
-					class="font-display text-4xl leading-[0.95] font-medium tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl"
+		<!-- Header: Asymmetrical Right-Aligned Layout -->
+		<div class="mb-14 sm:mb-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+			<!-- Left: Tokopedia CTA pill -->
+			<div class="order-2 sm:order-1">
+				<a
+					href="https://tokopedia.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="group inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-xs font-mono tracking-wider text-stone-300 transition-all duration-200 hover:border-white/60 hover:bg-white/5 hover:text-white"
 				>
-					Official Merch
+					<span>{$t.merch.officialStore}</span>
+					<span
+						class="inline-block transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+						>↗</span
+					>
+				</a>
+			</div>
+			<!-- Right: Label & Title right-aligned -->
+			<div class="order-1 sm:order-2 flex flex-col sm:items-end text-left sm:text-right">
+				<SectionLabel number="03" title={$t.merch.sectionTitle} numberColor="text-white" class="mb-3" />
+				<h2
+					class="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight"
+				>
+					{$t.merch.heading}
 				</h2>
 			</div>
-			<a
-				href="https://tokopedia.com"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="group hidden items-center gap-2 text-xs font-normal tracking-wide text-stone-400 transition-colors hover:text-white sm:inline-flex sm:text-sm"
-			>
-				Official Store
-				<span
-					class="inline-block transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
-					>↗</span
-				>
-			</a>
 		</div>
 
 		<!-- 3-Column Editorial Grid -->
@@ -113,9 +118,9 @@
 					class="group flex flex-col no-underline"
 					aria-label="Shop {item.name}"
 				>
-					<!-- Sharp Product Card Container with White Background -->
+					<!-- Sharp Product Card Container with Thin Border & No Background -->
 					<div
-						class="relative aspect-square w-full overflow-hidden border border-stone-200 bg-white shadow-sm transition-all duration-500 group-hover:border-stone-400 group-hover:shadow-2xl"
+						class="relative aspect-square w-full overflow-hidden border border-white/20"
 					>
 						<!-- Layered Crossfading Images (Static on Hover / Touch) -->
 						<div class="relative h-full w-full">
@@ -124,19 +129,19 @@
 								<img
 									src={resolveImage(img)}
 									alt="{item.name} — view {imgIdx + 1}"
-									class="absolute inset-0 h-full w-full object-contain p-2 sm:p-2.5 transition-opacity duration-300 ease-out
+									class="absolute inset-0 h-full w-full object-contain p-3 sm:p-4 transition-opacity duration-300 ease-out
 									{isActive ? 'opacity-100 z-1 pointer-events-auto' : 'opacity-0 z-0 pointer-events-none'}"
 									loading={imgIdx === 0 ? 'eager' : 'lazy'}
 								/>
 							{/each}
 						</div>
 
-						<!-- Left / Right Navigation Arrows (Transparent) -->
+						<!-- Left / Right Navigation Arrows (Transparent on Dark) -->
 						{#if totalImages > 1}
 							<button
 								type="button"
 								aria-label="Previous image"
-								class="absolute top-1/2 left-1.5 z-20 -translate-y-1/2 rounded-full bg-transparent p-2 text-stone-700/60 transition-colors duration-200 hover:text-stone-950 hover:bg-black/5 opacity-0 group-hover:opacity-100 focus:opacity-100"
+								class="absolute top-1/2 left-1.5 z-20 -translate-y-1/2 rounded-full bg-black/20 p-2 text-white/70 backdrop-blur-xs transition-colors duration-200 hover:text-white hover:bg-black/40 opacity-0 group-hover:opacity-100 focus:opacity-100"
 								onclick={(e) => handlePrev(e, item.id, totalImages)}
 							>
 								<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -147,7 +152,7 @@
 							<button
 								type="button"
 								aria-label="Next image"
-								class="absolute top-1/2 right-1.5 z-20 -translate-y-1/2 rounded-full bg-transparent p-2 text-stone-700/60 transition-colors duration-200 hover:text-stone-950 hover:bg-black/5 opacity-0 group-hover:opacity-100 focus:opacity-100"
+								class="absolute top-1/2 right-1.5 z-20 -translate-y-1/2 rounded-full bg-black/20 p-2 text-white/70 backdrop-blur-xs transition-colors duration-200 hover:text-white hover:bg-black/40 opacity-0 group-hover:opacity-100 focus:opacity-100"
 								onclick={(e) => handleNext(e, item.id, totalImages)}
 							>
 								<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -155,7 +160,7 @@
 								</svg>
 							</button>
 
-							<!-- Segmented Pagination Dots (Transparent) -->
+							<!-- Segmented Pagination Dots -->
 							<div
 								class="absolute bottom-3 left-1/2 z-20 flex -translate-x-1/2 items-center gap-1.5 bg-transparent p-1 transition-all duration-300"
 							>
@@ -163,7 +168,7 @@
 									<button
 										type="button"
 										aria-label="Switch to photo {dotIdx + 1}"
-										class="h-1.5 rounded-full transition-all duration-300 {currentIndex === dotIdx ? 'w-4 bg-stone-900' : 'w-1.5 bg-stone-400/60 hover:bg-stone-800'}"
+										class="h-1.5 rounded-full transition-all duration-300 {currentIndex === dotIdx ? 'w-4 bg-white' : 'w-1.5 bg-white/30 hover:bg-white/60'}"
 										onclick={(e) => handleSelect(e, item.id, dotIdx)}
 										onmouseenter={(e) => handleSelect(e, item.id, dotIdx)}
 									></button>

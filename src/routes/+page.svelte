@@ -6,7 +6,6 @@
 	import tourData from '$lib/data/tour.json';
 	import merchData from '$lib/data/merch.json';
 	import galleryData from '$lib/data/gallery.json';
-	import pressData from '$lib/data/press.json';
 	import bandData from '$lib/data/band.json';
 
 	import HeroSection from '$lib/components/sections/HeroSection.svelte';
@@ -14,14 +13,12 @@
 	import TourSection from '$lib/components/sections/TourSection.svelte';
 	import MerchSection from '$lib/components/sections/MerchSection.svelte';
 	import GallerySection from '$lib/components/sections/GallerySection.svelte';
-	import PressSection from '$lib/components/sections/PressSection.svelte';
 	import ContactSection from '$lib/components/sections/ContactSection.svelte';
 
 	const releases = musicData as MusicRelease[];
 	const tourDates = tourData as TourDate[];
 	const merchItems = merchData as MerchItem[];
 	const galleryItems = galleryData as GalleryItem[];
-	const pressItems = pressData as PressItem[];
 
 	const schemaData = JSON.stringify({
 		'@context': 'https://schema.org',

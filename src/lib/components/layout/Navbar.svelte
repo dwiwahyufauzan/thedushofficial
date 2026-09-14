@@ -3,53 +3,28 @@
 	import { fade, fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 	import { base } from '$app/paths';
+	import { t } from '$lib/i18n';
 
 	let menuOpen = $state(false);
 	let activeHash = $state('');
-	let isDark = $state(true); // Hero starts as dark
 
-	const desktopLinks = [
-		{ label: 'Music', href: '#music' },
-		{ label: 'Tour', href: '#tour' },
-		{ label: 'Merch', href: '#merch' },
-		{ label: 'Gallery', href: '#gallery' },
-		{ label: 'Press', href: '#press' }
-	];
+	const desktopLinks = $derived([
+		{ label: $t.nav.music, href: '#music' },
+		{ label: $t.nav.tour, href: '#tour' },
+		{ label: $t.nav.merch, href: '#merch' },
+		{ label: $t.nav.gallery, href: '#gallery' },
+		{ label: $t.nav.contact, href: '#contact' }
+	]);
 
-	const mobileLinks = [
-		{ number: '01', label: 'Music', href: '#music' },
-		{ number: '02', label: 'Tour', href: '#tour' },
-		{ number: '03', label: 'Merch', href: '#merch' },
-		{ number: '04', label: 'Gallery', href: '#gallery' },
-		{ number: '05', label: 'Press', href: '#press' },
-		{ number: '06', label: 'Contact', href: '#contact' }
-	];
-
-	function updateNavbarTheme() {
-		const checkY = 60; // Point below the top of the viewport under the navbar
-		const sections = document.querySelectorAll<HTMLElement>('section[id]');
-
-		let foundDark = false;
-		for (const section of sections) {
-			const rect = section.getBoundingClientRect();
-			if (rect.top <= checkY && rect.bottom > checkY) {
-				const isSectionDark =
-					section.id === 'hero' ||
-					section.dataset.theme === 'dark' ||
-					section.classList.contains('bg-stone-950') ||
-					section.classList.contains('bg-black');
-				foundDark = isSectionDark;
-				break;
-			}
-		}
-		isDark = foundDark;
-	}
+	const mobileLinks = $derived([
+		{ number: '01', label: $t.nav.music, href: '#music' },
+		{ number: '02', label: $t.nav.tour, href: '#tour' },
+		{ number: '03', label: $t.nav.merch, href: '#merch' },
+		{ number: '04', label: $t.nav.gallery, href: '#gallery' },
+		{ number: '05', label: $t.nav.contact, href: '#contact' }
+	]);
 
 	onMount(() => {
-		updateNavbarTheme();
-		window.addEventListener('scroll', updateNavbarTheme, { passive: true });
-		window.addEventListener('resize', updateNavbarTheme, { passive: true });
-
 		// Highlight active nav link via IntersectionObserver
 		const sections = document.querySelectorAll('section[id]');
 		const io = new IntersectionObserver(
@@ -63,8 +38,6 @@
 		sections.forEach((s) => io.observe(s));
 
 		return () => {
-			window.removeEventListener('scroll', updateNavbarTheme);
-			window.removeEventListener('resize', updateNavbarTheme);
 			io.disconnect();
 		};
 	});
@@ -104,7 +77,7 @@
 			/>
 		</a>
 
-		<!-- Desktop Nav -->
+		<!-- Desktop Nav: Contact in the center replacing Press -->
 		<nav class="hidden items-center gap-1 sm:gap-2 md:flex" aria-label="Main">
 			{#each desktopLinks as { label, href }}
 				<a
@@ -117,19 +90,13 @@
 			{/each}
 		</nav>
 
-		<!-- Right actions -->
+		<!-- Right actions: Ticket Button -->
 		<div class="hidden items-center gap-3 md:flex">
-			<a
-				href="#contact"
-				class="px-3 py-1.5 text-sm font-normal text-white opacity-85 transition-opacity duration-150 hover:opacity-100"
-			>
-				Contact
-			</a>
 			<a
 				href="#tour"
 				class="rounded-full border border-white/80 px-3.5 py-1 text-xs font-normal text-white transition-opacity duration-150 hover:opacity-80 sm:text-sm"
 			>
-				Get Tickets
+				Ticket
 			</a>
 		</div>
 
@@ -212,14 +179,14 @@
 				{/each}
 			</nav>
 
-			<!-- Action CTA Buttons -->
+			<!-- Mobile CTA Button -->
 			<div class="flex flex-col gap-3 pt-2">
 				<a
 					href="#tour"
 					onclick={close}
 					class="w-full rounded-full bg-white py-3.5 text-center text-sm font-medium tracking-wide text-stone-950 shadow-md transition-all hover:bg-stone-200"
 				>
-					Get Tickets
+					Ticket
 				</a>
 				<p class="pt-1 text-center font-mono text-[10px] tracking-wider text-stone-600 uppercase">
 					Tap anywhere outside to close

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { MusicRelease } from '$lib/types';
 	import SectionLabel from '../ui/SectionLabel.svelte';
+	import { t } from '$lib/i18n';
 
 	interface Props {
 		releases: MusicRelease[];
@@ -13,30 +14,30 @@
 
 <section id="music" class="border-t border-stone-100 bg-white py-24 sm:py-32">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-		<!-- Header (Left-aligned) -->
-		<div class="mb-16 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-			<div>
-				<SectionLabel number="01" title="Music & Releases" numberColor="text-stone-900" class="mb-4" />
-				<h2
-					class="font-display text-4xl leading-[0.95] font-medium tracking-tight text-stone-900 sm:text-6xl md:text-7xl lg:text-8xl"
-				>
-					Latest Releases
-				</h2>
-			</div>
-			{#if featured}
-				<a
-					href={featured.spotifyUrl ?? '#'}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="group hidden items-center gap-2 text-xs font-normal tracking-wide text-stone-500 transition-colors hover:text-stone-950 sm:inline-flex sm:text-sm"
-				>
-					All Platforms
-					<span
-						class="inline-block transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
-						>↗</span
+		<!-- Header: Top-Ruled Horizontal Split Layout -->
+		<div class="mb-12 sm:mb-14">
+			<div class="flex items-center justify-between border-b border-stone-200/80 pb-3 mb-5">
+				<SectionLabel number="01" title={$t.music.sectionTitle} numberColor="text-stone-900" />
+				{#if featured}
+					<a
+						href={featured.spotifyUrl ?? '#'}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="group inline-flex items-center gap-1.5 font-mono text-xs text-stone-500 transition-colors hover:text-stone-950 sm:text-sm"
 					>
-				</a>
-			{/if}
+						<span>{$t.music.allPlatforms}</span>
+						<span
+							class="inline-block transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+							>↗</span
+						>
+					</a>
+				{/if}
+			</div>
+			<h2
+				class="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-stone-900 leading-tight"
+			>
+				{$t.music.heading}
+			</h2>
 		</div>
 
 		<!-- Asymmetrical Editorial Music Showcase -->

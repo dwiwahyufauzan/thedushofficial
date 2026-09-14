@@ -2,6 +2,7 @@
 	import { base } from '$app/paths';
 	import type { TourDate } from '$lib/types';
 	import SectionLabel from '../ui/SectionLabel.svelte';
+	import { t } from '$lib/i18n';
 
 	interface Props {
 		tourDates: TourDate[];
@@ -40,15 +41,20 @@
 
 <section id="tour" class="bg-white py-24 sm:py-32">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-		<!-- Header (Left-aligned, consistent with MusicSection) -->
-		<div class="mb-16 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-			<div>
-				<SectionLabel number="02" title="Live & Tour" numberColor="text-stone-900" class="mb-4" />
-				<h2
-					class="font-display text-4xl leading-[0.95] font-medium tracking-tight text-stone-900 sm:text-6xl md:text-7xl lg:text-8xl"
-				>
-					Tour Dates
-				</h2>
+		<!-- Header: Centered Monumental Layout -->
+		<div class="mb-12 sm:mb-14 text-center">
+			<div class="flex justify-center mb-3">
+				<SectionLabel number="02" title={$t.tour.sectionTitle} numberColor="text-stone-900" />
+			</div>
+			<h2
+				class="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-stone-900 leading-tight"
+			>
+				{$t.tour.heading}
+			</h2>
+			<div class="mt-3 flex items-center justify-center gap-3">
+				<span class="h-[1px] w-6 sm:w-12 bg-stone-300"></span>
+				<span class="font-mono text-[10px] sm:text-[11px] tracking-[0.2em] text-stone-400 uppercase">Stage Schedule</span>
+				<span class="h-[1px] w-6 sm:w-12 bg-stone-300"></span>
 			</div>
 		</div>
 
