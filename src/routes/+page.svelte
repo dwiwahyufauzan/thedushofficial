@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import type { MusicRelease, TourDate, MerchItem, GalleryItem, PressItem } from '$lib/types';
 
 	import musicData from '$lib/data/music.json';
@@ -50,19 +51,19 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="{bandData.officialName} | INDIEPOPROCK PINGGIRAN SUBANG." />
 	<meta property="og:description" content={bandData.shortBio} />
-	<meta property="og:image" content="/images/background.jpg" />
+	<meta property="og:image" content="{base}/images/background.jpg" />
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="{bandData.officialName} | INDIEPOPROCK PINGGIRAN SUBANG." />
 	<meta name="twitter:description" content={bandData.shortBio} />
-	<meta name="twitter:image" content="/images/background.jpg" />
+	<meta name="twitter:image" content="{base}/images/background.jpg" />
 
 	<!-- JSON-LD Structured Data -->
 	{@html `<script type="application/ld+json">${schemaData}</script>`}
 </svelte:head>
 
 <!-- One-Pager 8 Sections Flow -->
-<HeroSection heroImage="/images/background.jpg" logoIcon="/images/thedushhero.png" />
+<HeroSection heroImage="{base}/images/background.jpg" logoIcon="{base}/images/thedushhero.png" />
 <MusicSection {releases} />
 <ContactSection />

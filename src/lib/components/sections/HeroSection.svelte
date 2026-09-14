@@ -11,10 +11,14 @@
 	}: Props = $props();
 
 	const resolvedHeroImage = $derived(
-		heroImage.startsWith('http') || heroImage.startsWith('data:') ? heroImage : `${base}${heroImage}`
+		heroImage.startsWith('http') || heroImage.startsWith('data:') || (base && heroImage.startsWith(base))
+			? heroImage
+			: `${base}${heroImage}`
 	);
 	const resolvedLogoIcon = $derived(
-		logoIcon.startsWith('http') || logoIcon.startsWith('data:') ? logoIcon : `${base}${logoIcon}`
+		logoIcon.startsWith('http') || logoIcon.startsWith('data:') || (base && logoIcon.startsWith(base))
+			? logoIcon
+			: `${base}${logoIcon}`
 	);
 </script>
 
